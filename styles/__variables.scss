@@ -1,0 +1,49 @@
+$color-background: #e1e3fc;
+$color-text: #012b3d;
+$color-text-button: #012b3d;
+$color-white: #fff;
+
+$color-link: #012b3d;
+$color-link-hover: #00cde9;
+
+$color-menu-text: #fff;
+$color-menu-background: #0076dd;
+$color-menu-text-hover: #153f51;
+$color-menu-background-hover: #00cde9;
+
+$color-background-red: #a02200;
+$color-background-green: #00a022;
+$color-background-blue: #2f74a0;
+
+$color-block-background: #fff;
+$color-block-border: #0076dd;
+$color-block-border-hover: #00cde9;
+
+$color-input-text: #153f51;
+$color-input-background: #fff;
+
+$break-xsmall: 400px;
+$break-small: 600px;
+$max-width: 600px;
+$min-width: 250px;
+
+$medium-screen: 'only screen and (min-width : #{$break-xsmall})';
+$bigger-screen: 'only screen and (min-width : #{$break-small})';
+
+@mixin flex {
+  display: flex;
+  flex: 1;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-spaced {
+  @include flex;
+  justify-content: space-between;
+}
+
+@mixin flex-end {
+  @include flex;
+  align-items: flex-end;
+}

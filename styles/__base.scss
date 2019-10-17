@@ -1,0 +1,31 @@
+@import '__reset';
+@import '__variables';
+
+html,
+body {
+  font: 16px/16px Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: $color-background;
+  color: $color-text;
+}
+
+a {
+  color: $color-link;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $color-link-hover;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: block;
+  max-width: $max-width;
+  min-width: $min-width;
+}
+
+.hidden {
+  display: none;
+}

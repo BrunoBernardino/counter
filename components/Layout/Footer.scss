@@ -1,0 +1,19 @@
+@import '__variables';
+
+.Footer {
+  display: block;
+  padding: 20px 10px;
+  margin: 0 auto;
+  text-align: center;
+
+  &__title {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    font-weight: 300;
+    margin-top: 15px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

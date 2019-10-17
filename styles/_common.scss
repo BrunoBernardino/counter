@@ -1,0 +1,75 @@
+@import '__variables';
+
+.common {
+  padding: 20px 10px;
+
+  &__block {
+    margin: 0 auto 20px;
+    padding: 20px;
+    background: $color-block-background;
+    max-width: 450px;
+    border-bottom: 2px solid $color-block-border;
+    transition: all 100ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      border-color: $color-block-border-hover;
+    }
+  }
+
+  &__line {
+    margin: 0 auto 10px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    text-align: left;
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  &__form {
+    display: block;
+    margin: 50px auto;
+    max-width: 470px;
+  }
+
+  &__input {
+    margin: 0 auto 10px;
+    padding: 10px 20px;
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    color: $color-input-text;
+    background: $color-input-background;
+    border-radius: 3px;
+    border: none;
+    transition: all 100ms ease-in-out;
+    width: 80%;
+  }
+
+  &__button {
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    color: $color-menu-text;
+    background: $color-menu-background;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: $color-menu-text-hover;
+      background-color: $color-menu-background-hover;
+    }
+  }
+}

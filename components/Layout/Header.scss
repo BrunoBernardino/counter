@@ -1,0 +1,107 @@
+@import '__variables';
+
+@keyframes excitement {
+  from {
+    transform: rotate(-3deg);
+  }
+  to {
+    transform: rotate(3deg);
+  }
+}
+
+.Header {
+  display: block;
+  text-align: center;
+  padding: 20px 10px;
+
+  &__title-wrapper {
+    display: block;
+
+    @media #{$bigger-screen} {
+      @include flex-end;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin: 0;
+
+    &:hover,
+    &:focus {
+      animation: excitement 100ms ease-in infinite reverse both running;
+    }
+
+    @media #{$bigger-screen} {
+      margin-right: 10px;
+    }
+
+    img {
+      width: 120px;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 100;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__tagline {
+    margin: 5px 0 5px 5px;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    font-weight: 200;
+  }
+
+  &__description {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+  }
+
+  &__notification-wrapper {
+    display: block;
+    position: fixed;
+    cursor: pointer;
+    top: 20px;
+    left: 50%;
+    opacity: 1;
+    transition: all 500ms ease-in-out;
+    outline: none;
+
+    &--hidden {
+      opacity: 0;
+      cursor: default;
+      visibility: hidden;
+    }
+  }
+
+  &__notification {
+    display: block;
+    position: relative;
+    left: -50%;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: $color-background-blue;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+
+    &--valid {
+      color: $color-white;
+      background-color: $color-background-green;
+    }
+
+    &--invalid {
+      color: $color-white;
+      background-color: $color-background-red;
+    }
+  }
+}
