@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { withRouter } from 'next/router';
+import Head from 'next/head';
 import Helmet from 'react-helmet';
 import { WithRouterProps } from 'next/dist/client/with-router';
 
@@ -113,6 +114,12 @@ const withPageLayout: any = (
 
       return (
         <>
+          <Head>
+            {title && <title>{title}</title>}
+            {title && <meta property="og:title" content={title} />}
+            {description && <meta name="description" content={description} />}
+            {keywords && <meta name="keywords" content={keywords} />}
+          </Head>
           {SEOOverride}
           <Loading isShowing={isLoading} />
           <div className="wrapper">
