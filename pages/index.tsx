@@ -6,6 +6,12 @@ import Paragraph from 'components/Paragraph';
 import TextBlock from 'components/TextBlock';
 import CounterForm from 'modules/counter/CounterForm';
 
+import {
+  defaultTitle,
+  defaultDescription,
+  defaultKeywords,
+} from 'lib/constants';
+
 import * as T from 'lib/types';
 
 export interface IndexPageProps extends T.WrappedComponentProps {}
@@ -44,4 +50,8 @@ const IndexPage = (props: IndexPageProps) => (
   </div>
 );
 
-export default withPageLayout(IndexPage, {});
+export default withPageLayout(IndexPage, {
+  title: defaultTitle,
+  description: defaultDescription,
+  keywords: defaultKeywords,
+});
