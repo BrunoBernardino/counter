@@ -31,8 +31,8 @@ pretty:
 
 .PHONY: deploy
 deploy:
-	now --prod
+	vercel --scope=brn --prod
 
 .PHONY: deploy/prod
 deploy/prod:
-	now alias set beta.counter.brn.sh counter.brn.sh
+	vercel --scope=brn alias set beta.counter.brn.sh counter.brn.sh

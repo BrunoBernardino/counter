@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "name": "counter",
-  "scope": "brunobernardino",
+  "scope": "brn",
   "alias": ["beta.counter.brn.sh"],
   "github": {
     "enabled": false
