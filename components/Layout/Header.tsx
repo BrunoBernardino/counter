@@ -36,7 +36,7 @@ export default class Header extends Component<HeaderProps, HeaderState> {
           <a href="https://brunobernardino.com" className="Header__logo">
             <img
               alt="Logo: a stylized snail and the letters brn"
-              src="/static/images/logo.svg"
+              src="/images/logo.svg"
             />
           </a>
           <h1 className="Header__title">

@@ -36,11 +36,11 @@ const linkItems = [
   {
     rel: 'icon',
     type: 'image/png',
-    href: '/static/images/favicon.png',
+    href: '/images/favicon.png',
   },
   {
     rel: 'apple-touch-icon',
-    href: '/static/images/favicon.png',
+    href: '/images/favicon.png',
   },
 ];
 

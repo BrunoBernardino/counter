@@ -31,8 +31,4 @@ pretty:
 
 .PHONY: deploy
 deploy:
-	vercel --scope=brn --prod
-
-.PHONY: deploy/prod
-deploy/prod:
-	vercel --scope=brn alias set beta.counter.brn.sh counter.brn.sh
+	serverless
