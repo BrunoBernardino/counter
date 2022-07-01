@@ -31,7 +31,7 @@ const IndexPage = (props: IndexPageProps) => (
     <TextBlock>
       <Title>Want to learn more?</Title>
       <Paragraph isCentered>
-        <a href="https://news.onbrn.com/putting-numbers-in-perspective/">
+        <a href="https://news.onbrn.com/putting-numbers-in-perspective">
           Here's my motivation to build this micro app
         </a>
         .

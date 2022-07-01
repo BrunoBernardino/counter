@@ -7,20 +7,6 @@ import Document, {
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
-const analyticsJS = `
-(function(f, a, t, h, o, m){
-a[h]=a[h]||function(){
-(a[h].q=a[h].q||[]).push(arguments)
-};
-o=f.createElement('script'),
-m=f.getElementsByTagName('script')[0];
-o.async=1; o.src=t; o.id='fathom-script';
-m.parentNode.insertBefore(o,m)
-})(document, window, 'https://cdn.usefathom.com/tracker.js', 'fathom');
-fathom('set', 'siteId', 'UAIVVKJN');
-fathom('trackPageview');
-`;
-
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
@@ -55,7 +41,11 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script dangerouslySetInnerHTML={{ __html: analyticsJS }} />
+          <script
+            defer
+            data-domain="counter.onbrn.com"
+            src="https://plausible.io/js/plausible.js"
+          />
         </body>
       </Html>
     );
