@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 import { withPageLayout } from 'hocs';
 import Title from 'components/Title';
@@ -49,6 +50,34 @@ const IndexPage = (props: IndexPageProps) => (
     </TextBlock>
   </div>
 );
+
+export const getServerSideProps = async ({ req }: { req: Request }) => {
+  // @ts-ignore it does exist
+  if (req && req.headers && !req.headers.host.startsWith('localhost')) {
+    const baseUrl = 'https://counter.onbrn.com';
+    const pathname = req.url;
+
+    try {
+      await axios.post('https://stats.onbrn.com/api/event', {
+        headers: {
+          'content-type': 'application/json; charset=utf-8',
+        },
+        body: {
+          domain: baseUrl.replace('https://', ''),
+          name: 'pageview',
+          url: `${baseUrl}${pathname}`,
+        },
+      });
+    } catch (error) {
+      console.log('Failed to log pageview');
+      console.error(error);
+    }
+  }
+
+  return {
+    props: {},
+  };
+};
 
 export default withPageLayout(IndexPage, {
   title: defaultTitle,

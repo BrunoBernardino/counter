@@ -6,6 +6,7 @@ import Document, {
   NextScript,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+// import axios from 'axios';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -41,11 +42,6 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script
-            defer
-            data-domain="counter.onbrn.com"
-            src="https://plausible.io/js/plausible.js"
-          />
         </body>
       </Html>
     );
